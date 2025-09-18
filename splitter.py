@@ -61,7 +61,7 @@ def change(filename):
         with open(filename, 'r') as f:
             for line in f:
                 if len(line.rstrip()) <= 132 or line.lstrip().startswith(("C", "c", "!")):
-                    new.append(line)
+                    new.append(line.rstrip('\n'))
                 else:
                     for chunk in process_line(line):
                         new.append(chunk)
