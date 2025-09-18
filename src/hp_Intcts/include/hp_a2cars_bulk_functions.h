@@ -251,10 +251,8 @@
       l27 = hp_mylog(-((cone*(r2*(1 - xa) - xa*xb**2 + xa**2*xb**2))/((-1 + xa)**2*(-1 + xb)*xb)))
       l28 = hp_mylog(cone*(1 - xa - xb + 2*xa*xb - 2*xa**2*xb**2 + xa**3*xb**3))
       l29 = hp_mylog(cone*(2 - xb + xa**2*xb**2 - xa*(1 + xb)))
-      l30 = hp_mylog((cone*(4*r4*xa + r5*xa - r4*xa**2 + r5*xb - 2*r4*xa*xb - xb**2.5_ki + 
-     &(-r5 + r4*xa + r4*xb)*Abs(xa - xb)))/((r5 - r4*xa - r4*xb)*(xa + xb - Abs(xa - xb))))
-      l31 = hp_mylog((cone*(-4*r4*xa + r5*xa + r4*xa**2 + r5*xb + 2*r4*xa*xb + xb**2.5_ki - 
-     &(r5 + r4*xa + r4*xb)*Abs(xa - xb)))/((r5 + r4*xa + r4*xb)*(xa + xb - Abs(xa - xb))))
+      l30 = hp_mylog((cone*(4*r4*xa + r5*xa - r4*xa**2 + r5*xb - 2*r4*xa*xb - xb**2.5_ki + (-r5 + r4*xa + r4*xb)*Abs(xa - xb)))/((r5 - r4*xa - r4*xb)*(xa + xb - Abs(xa - xb))))
+      l31 = hp_mylog((cone*(-4*r4*xa + r5*xa + r4*xa**2 + r5*xb + 2*r4*xa*xb + xb**2.5_ki - (r5 + r4*xa + r4*xb)*Abs(xa - xb)))/((r5 + r4*xa + r4*xb)*(xa + xb - Abs(xa - xb))))
       g1 = hp_glog(-2*cone,-cone,cone*xb)
       g2 = hp_glog(-2*cone,czip,cone*xb)
       g3 = hp_glog(-2*cone,2*cone,cone*xb)

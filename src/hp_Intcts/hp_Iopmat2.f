@@ -734,7 +734,7 @@ c     Accumulate the I20 operator which will be multiplied by the Born ME
                outarr(i,j,-1) = infunc(i,j)*logpower*xlrs
                outarr(i,j, 0) = infunc(i,j)*((logpower*xlrs)**2/2.0_ki + pisq/12.0_ki)
                outarr(i,j, 1) = infunc(i,j)*((logpower*xlrs)**3/6.0_ki + pisq/12.0_ki*(logpower*xlrs) + zeta3/3.0_ki)
-               outarr(i,j, 2) = infunc(i,j)*((logpower*xlrs)**4/24.0_ki + pisq/24.0_ki*(logpower*xlrs)**2 ) !+ (logpower*xlrs)*zeta3/3.0_ki + pisq**2/160.0_ki)
+               outarr(i,j, 2) = infunc(i,j)*((logpower*xlrs)**4/24.0_ki + pisq/24.0_ki*(logpower*xlrs)**2 + (logpower*xlrs)*zeta3/3.0_ki + pisq**2/160.0_ki)
             endif
          enddo
       enddo

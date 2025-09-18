@@ -1,8 +1,8 @@
       subroutine checkversion(inpunit,filename)
-!***********************************************************************
-!  Checks that the version of NNLOCAL specified in the next line of    *
-!  unit  *"inpunit" agrees with the version number of the code         *
-!***********************************************************************
+************************************************************************
+*  Checks that the version of NNLOCAL specified in the next line of    *
+*  unit  *"inpunit" agrees with the version number of the code         *
+************************************************************************
       implicit none
       include 'codeversion.f'
       integer inpunit,j,dat

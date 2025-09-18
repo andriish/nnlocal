@@ -1,10 +1,10 @@
       subroutine gg_htot(z,msq)
       implicit none
-!----Lowest order matrix element for H production
-!----in the heavy quark (mt=Infinity) limit.
-!----averaged over initial colours and spins
-!    g(-p1)+g(-p2)-->H --> gamma(p3) + gamma(p4) 
-!---
+c----Lowest order matrix element for H production
+c----in the heavy quark (mt=Infinity) limit.
+C----averaged over initial colours and spins
+c    g(-p1)+g(-p2)-->H --> gamma(p3) + gamma(p4) 
+c---
       include 'constants.f'
       include 'masses.f'
       include 'qcdcouple.f'
@@ -32,7 +32,7 @@
       logr = -dlog(facscale**2/musq)
       logf = dlog(hmass**2/facscale**2)
       
-!---  set msq=0 to initialize
+c---  set msq=0 to initialize
       do i=1,4
          do j=-nf,nf
             do k=-nf,nf
@@ -47,8 +47,8 @@
       Asq=(as/(pi))**2/vevsq*pi
       gg=Asq/576d0
       
-!---  order-by-order
-!---  lo
+c---  order-by-order
+c---  lo
       msqlo(0,0,1)   = gg
 
       if (order.eq.0) then
@@ -60,7 +60,7 @@
       if (order.eq.0) return
 
       
-!---  nlo
+c---  nlo
       if (switch.eq.0) then
          msqnlo(0,0,1)  = gg*as/pi*(5.5d0+pisq)
 
@@ -107,7 +107,7 @@
       if (abs(order).eq.1) return
 
       
-!---  nnlo
+c---  nnlo
       if (switch.eq.0) then
       msqnnlo(0,0,1) = gg*(as/pi)**2*
      1   (11399/144+19*lt/8d0+133*pisq/12d0-pisq**2/80d0-165*zeta3/4d0)
@@ -233,7 +233,7 @@
          
       endif
 
-!---  full
+c---  full
 
 
       if (order.eq.2) then

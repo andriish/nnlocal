@@ -50,7 +50,7 @@ c--complex dilogarithm (spence-function)
         return
       elseif ((r2>one) .and. (rr>half)) then
         y=(xtmp-one)/xtmp
-        hp_cli2=hp_li2taylor(y)+rzeta2-log(xtmp)*log(one-xtmp)!+half*log(xtmp)**2
+        hp_cli2=hp_li2taylor(y)+rzeta2-log(xtmp)*log(one-xtmp)+half*log(xtmp)**2
         return
       elseif ((r2>one) .and. (rr<=half))then
         y=one/xtmp

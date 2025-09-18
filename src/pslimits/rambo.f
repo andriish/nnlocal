@@ -28,9 +28,7 @@ C---Gabor Somogyi March 2014
       double precision et,wt
       
       double precision xm(mxpart),p(4,mxpart),q(4,mxpart),z(mxpart)
-      double precision r(4), b(3),p2(mxpart),xm2(mxpart)
-      double precision e(mxpart)
-      !v(mxpart)      
+     .     ,r(4), b(3),p2(mxpart),xm2(mxpart),e(mxpart),v(mxpart)      
       SAVE Z
       
       double precision acc
@@ -38,8 +36,8 @@ C---Gabor Somogyi March 2014
       DATA ACC/1.D-14/,ITMAX/6/,IBEGIN/0/,IWARN/5*0/
 
       integer i,iter,k,nm
-      double precision a,accu,bq,c,f,f0,g,g0,rmas,s,wt2,wt3,wtm,x,x2
-      double precision      xmax,xmt,rn
+      double precision a,accu,bq,c,f,f0,g,g0,rmas,s,wt2,wt3,wtm,x,x2,
+     .     xmax,xmt,rn
 
 C INITIALIZATION STEP: FACTORIALS FOR THE PHASE SPACE WEIGHT
       IF(IBEGIN.NE.0) GOTO 103
@@ -135,7 +133,7 @@ C MASSIVE PARTICLES: RESCALE THE MOMENTA BY A FACTOR X
   304 X=X-F0/(X*G0)
       GOTO 302
   305 DO 307 I=1,N
-C      V(I)=X*P(4,I)
+      V(I)=X*P(4,I)
       DO 306 K=1,3
   306 P(K,I)=X*P(K,I)
   307 P(4,I)=E(I)
@@ -144,8 +142,8 @@ C CALCULATE THE MASS-EFFECT WEIGHT FACTOR
       WT2=1.
       WT3=0.
       DO 308 I=1,N
-      WT2=0.0!WT2*V(I)/E(I)
-  308 WT3=WT3!+V(I)**2/E(I)
+      WT2=WT2*V(I)/E(I)
+  308 WT3=WT3+V(I)**2/E(I)
       WTM=(2.*N-3.)*DLOG(X)+DLOG(WT2/WT3*ET)
 
 C RETURN FOR  WEIGHTED MASSIVE MOMENTA

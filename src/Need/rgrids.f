@@ -14,7 +14,7 @@
       write(6,*)'      Reading in vegas grid from ',ingridfile
       write(6,*)'****************************************************'
       call flush(6)
-!--- read-in grid
+c--- read-in grid
       open(unit=11,file=ingridfile,status='unknown')
       ndim=0
       do i=1,mxdim

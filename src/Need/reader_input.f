@@ -1,7 +1,7 @@
       subroutine reader_input(inputfile,workdir)
-!***********************************************************************
-!     Routine to read in the file input.DAT                            *
-!***********************************************************************
+************************************************************************
+*     Routine to read in the file input.DAT                            *
+************************************************************************
       implicit none
       include 'constants.f'
       include 'order.f'
