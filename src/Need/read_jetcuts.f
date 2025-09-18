@@ -16,9 +16,9 @@ c      if (newinput) then
         return
 c      endif
       
-      nargs=iargc()
+      nargs = command_argument_count()
       if (nargs .eq. 2) then
-      call getarg(2,jetcutsfile)
+      call get_command_argument(2,jetcutsfile)
       else
       jetcutsfile='jetcuts.DAT'
       endif      

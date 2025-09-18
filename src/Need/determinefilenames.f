@@ -6,9 +6,9 @@
 c--- work out the name of the input file and return it
 
 
-      nargs=iargc()
+      nargs = command_argument_count()
       if (nargs .ge. 1) then
-        call getarg(1,inputfile)
+        call get_command_argument(1, inputfile)
       else
         inputfile='input.DAT'
       endif

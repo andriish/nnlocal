@@ -36,7 +36,7 @@
       return
       end
 
-ccccccccccccccccccccccc
+!cccccccccccccccccccccc
 
       subroutine hp_glog00z(z, out)
       implicit none
@@ -47,7 +47,7 @@ ccccccccccccccccccccccc
       return
       end
 
-ccccccccccccccccccccccc
+!cccccccccccccccccccccc
 
       subroutine hp_glogz00(z, out)
       implicit none
@@ -57,7 +57,7 @@ ccccccccccccccccccccccc
       return
       end
 
-ccccccccccccccccccccccccc      
+!cccccccccccccccccccccccc      
 
       subroutine hp_glogaz0(a, z, out)
       implicit none
@@ -68,7 +68,7 @@ ccccccccccccccccccccccccc
       return
       end
 
-ccccccccccccccccccccccccc
+!cccccccccccccccccccccccc
 
       subroutine hp_glog0az(a, z, out)
       implicit none
@@ -79,7 +79,7 @@ ccccccccccccccccccccccccc
       return
       end
 
-cccccccccccccccccccccccccc
+!ccccccccccccccccccccccccc
       
       subroutine hp_gloga0z(a, z, out)
       implicit none
@@ -113,7 +113,7 @@ cccccccccccccccccccccccccc
       return
       end
 
-cccccccccccccccccccccccccc
+!ccccccccccccccccccccccccc
 
       subroutine hp_glogaaz(a, z, out)
       implicit none
@@ -125,7 +125,7 @@ cccccccccccccccccccccccccc
       return
       end
 
-cccccccccccccccccccccccccc
+!ccccccccccccccccccccccccc
 
       subroutine hp_glogazz(a, z, out)
       implicit none
@@ -145,7 +145,7 @@ cccccccccccccccccccccccccc
       endif
       end
 
-ccccccccccccccccccccccccccc
+!cccccccccccccccccccccccccc
       
       subroutine hp_glogabz(a, b, z, out)
       implicit none

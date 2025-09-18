@@ -1,5 +1,5 @@
-c --- Common block for keeping track of weights, used
-c --- if unweighting is selected :
+! --- Common block for keeping track of weights, used
+! --- if unweighting is selected :
       double precision wtmax,newwt
       logical evtgen
       logical unweight
@@ -7,5 +7,5 @@ c --- if unweighting is selected :
       integer nevtrequested
       common/maxwt/wtmax,newwt,nevtrequested,evtgen,skipnt,unweight
 
-c --- Useful local variables where weights are being checked :
+! --- Useful local variables where weights are being checked :
       double precision wtabs

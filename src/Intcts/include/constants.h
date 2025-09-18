@@ -25,7 +25,7 @@
       real(ki), parameter :: pion10=pi/ten
       real(ki), parameter :: pisqm8=pisq-eight
 
-      real(ki), parameter :: rt2=1.41421356237309504880168872420969798_ki
+      real(ki), parameter ::rt2=1.41421356237309504880168872420969798_ki
       real(ki), parameter :: twort2=two*rt2
       real(ki), parameter :: fourrt2=four*rt2
 ! sqrt(two/pi)

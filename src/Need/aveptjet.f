@@ -16,7 +16,7 @@
         isub=1  ! subtraction term
       endif
       
-c-- cluster jets but make sure recorded number of jets is not changed
+!-- cluster jets but make sure recorded number of jets is not changed
       oldjets=jets     
       call genclust2(p,rcut,pjet,isub)
       
@@ -31,11 +31,11 @@ c-- cluster jets but make sure recorded number of jets is not changed
      
    99 continue  
 
-c--- restore old value of jets
+!--- restore old value of jets
       jets=oldjets
 
-c--- dummy value returned if countjet=0, since this process
-c--- must have nqcdjets > 0 - so this point will be dumped anyway  
+!--- dummy value returned if countjet=0, since this process
+!--- must have nqcdjets > 0 - so this point will be dumped anyway  
       if (countjet .eq. 0) then
         aveptjet=10d0
         return

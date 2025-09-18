@@ -1,7 +1,7 @@
       subroutine boost(mass,p1,p_in,p_out)
-c     take momenta p_in in frame in which particle one is at rest with mass 
-c     "mass" 
-c     and convert to frame in which particle one has fourvector p1
+!     take momenta p_in in frame in which particle one is at rest with mass 
+!     "mass" 
+!     and convert to frame in which particle one has fourvector p1
       implicit none
       double precision mass,p1(4),p_in(4),p_out(4)
       double precision gam,beta(1:3),bdotp,one
