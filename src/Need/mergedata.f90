@@ -211,7 +211,9 @@ program merge_gnuplot_data
      endif
   enddo
 
-  if (maxupt + maxdnt == 0) return
+  if (maxupt + maxdnt == 0) then 
+     call exit(0)
+  end if
   ! --- trimming
   rewind 12
   do k = 1, nlines(1)

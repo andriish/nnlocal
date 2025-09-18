@@ -1,7 +1,7 @@
 import sys
 import os
 
-BREAK_CHARS = set(" \t+-*/(),=")
+BREAK_CHARS = set(" \t+-/(),=")
 
 
 SRC_DIR = "src"

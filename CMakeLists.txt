@@ -27,7 +27,7 @@ if(CMAKE_Fortran_COMPILER_ID STREQUAL "Intel" OR CMAKE_Fortran_COMPILER_ID STREQ
     set(CMAKE_Fortran_FLAGS "-traceback -g -O2  -diag-disable 8291 -diag-disable 6375 -extend-source 132")
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "NVHPC")
     # NVIDIA HPC Fortran
-    set(CMAKE_Fortran_FLAGS "-g -Mbounds -Mpreprocess")
+    set(CMAKE_Fortran_FLAGS "-g -Mbounds -Mpreprocess -Mextend")
 #-Mfreeform -Mextend -Mextend
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "GNU")
     # GNU Fortran

@@ -848,8 +848,10 @@
       l115 = hp_mylog(cone*(r1 + xa*xb))
       l116 = hp_mylog(cone*(r1 - im*r2*r3*(-1 + xb) + xa*xb))
       l117 = hp_mylog(cone*(r1 + im*r2*r3*(-1 + xb) + xa*xb))
-      l118 = hp_mylog(cone*(xa - xb - 2*r2*r3*r6*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)*xb**2) + xa**2*(-3 + xb*(-4 + 3*xb)))))
-      l119 = hp_mylog(cone*(xa - xb + 2*r2*r3*r6*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)*xb**2) + xa**2*(-3 + xb*(-4 + 3*xb)))))
+      l118 = hp_mylog(cone*(xa - xb - 2*r2*r3*r6*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)
+     &*xb**2) + xa**2*(-3 + xb*(-4 + 3*xb)))))
+      l119 = hp_mylog(cone*(xa - xb + 2*r2*r3*r6*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)
+     &*xb**2) + xa**2*(-3 + xb*(-4 + 3*xb)))))
       l120 = hp_mylog((cone*(r2 - r3*r4))/(-(r3*r4) + r2*xb))
       l121 = hp_mylog((cone*(r2/r3 + r4))/(r2*r3 + r4))
       l122 = hp_mylog((cone*(-(r2*r6) + r3*xa))/(r3 - r2*r6))
@@ -898,9 +900,12 @@
       l165 = hp_mylog((cone*((2*r12)/r20 + r7 - r15*r8 + r2*r3*(xa + xb)))/(r7 - r15*r8 + r2*r3*(xa + xb)))
       l166 = hp_mylog((cone*((-2*r11)/r19 + r7 + r15*r8 + r2*r3*(xa + xb)))/(r7 + r15*r8 + r2*r3*(xa + xb)))
       l167 = hp_mylog((cone*((-2*r12)/r20 + r7 + r15*r8 + r2*r3*(xa + xb)))/(r7 + r15*r8 + r2*r3*(xa + xb)))
-      l168 = hp_mylog(cone*(r1*(r5 + xb - r5*xb - xa*xb*(-1 + xa + xb)) - xb*(r5*(-1 + xb) + xa*(1 - 2*xb + xa*(-1 + xb*(xa + xb))))))
-      l169 = hp_mylog(cone*(r1*(r5*(-1 + xb) + xb - xa*xb*(-1 + xa + xb)) - xb*(r5 - r5*xb + xa*(1 - 2*xb + xa*(-1 + xb*(xa + xb))))))
-      l170 = hp_mylog((cone*(xa - xb + 2*r1*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)*xb**2) + xa**2*(-3 + xb*(-4 + 3*xb)))))/((-1 + xb)*(1 + xb)*(xa + xb)*(-1 + xa*xb)))
+      l168 = hp_mylog(cone*(r1*(r5 + xb - r5*xb - xa*xb*(-1 + xa + xb)) - xb*(r5*(-1 + xb) + xa*(1 - 2*xb + xa*(-1 + xb*(xa + xb))))
+     &))
+      l169 = hp_mylog(cone*(r1*(r5*(-1 + xb) + xb - xa*xb*(-1 + xa + xb)) - xb*(r5 - r5*xb + xa*(1 - 2*xb + xa*(-1 + xb*(xa + xb))))
+     &))
+      l170 = hp_mylog((cone*(xa - xb + 2*r1*(-1 + xa)*(-1 + xb*(-1 + xa + xb)) + xb*(2*xa**3*xb + xb**2 + xa*(4 + (-4 + xb)*xb**2) +
+     & xa**2*(-3 + xb*(-4 + 3*xb)))))/((-1 + xb)*(1 + xb)*(xa + xb)*(-1 + xa*xb)))
       l171 = hp_mylog((cone*(-1 + xb)*(xa + xb))/(r1 - xa))
       l172 = hp_mylog(-((cone*r3*(-1 + xb)*(-(r2*r6) + r3*(1 + xa + xb)))/(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb))))
       l173 = hp_mylog((cone*(-1 + r3)*r3*(1 + r3)*(r2*r6 + r3*(1 + xa + xb)))/(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))
@@ -1030,10 +1035,14 @@
       g2 = hp_glog(czip,(cone*(r2 + r3*r4))/(r2 - r2*xb),cone)
       g3 = hp_glog(czip,-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
       g4 = hp_glog(czip,(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g5 = hp_glog(czip,-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g6 = hp_glog(czip,(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g7 = hp_glog(czip,(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g8 = hp_glog(czip,(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g5 = hp_glog(czip,-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + 
+     &xb))),cone)
+      g6 = hp_glog(czip,(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + 
+     &xb)),cone)
+      g7 = hp_glog(czip,(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + 
+     &xb)),cone)
+      g8 = hp_glog(czip,(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + 
+     &xb)),cone)
       g9 = hp_glog((cone*(r2 - im*r3))/(r2 - r2*xb),czip,cone)
       g10 = hp_glog((cone*(r2 - im*r3))/(r2 - r2*xb),(cone*(1 + xb))/(1 - xb),cone)
       g11 = hp_glog((cone*(r2 - im*r3))/(r2 - r2*xb),(cone*(1 - xa))/(xa*(-1 + xb)),cone)
@@ -1111,33 +1120,53 @@
       g83 = hp_glog((cone*(r1 - xa*xb))/(xb - xa*xb),(cone*(1 + xa))/(-1 + xa),cone)
       g84 = hp_glog((cone*(r1 - xa*xb))/(xb - xa*xb),(cone*xa*(1 + xb))/((-1 + xa)*xb),cone)
       g85 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),cone,cone)
-      g86 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
-      g87 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g88 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g89 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g90 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g91 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g86 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),-((cone*(r1 + xa))/((-1 + xb)*(xa + 
+     &xb))),cone)
+      g87 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1 + xa*xb))/(xb - xb**2),
+     &cone)
+      g88 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(
+     &-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g89 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g90 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g91 = hp_glog((cone*((-im)*r1 + r2*r3*(-1 + xb) - im*xa*xb))/((r2 + im*r3)*r3*(-1 + xb)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g92 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),cone,cone)
-      g93 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
-      g94 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g95 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g96 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g97 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g98 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g93 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),-((cone*(r1 + xa))/((-1 + xb)*(xa + 
+     &xb))),cone)
+      g94 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1 + xa*xb))/(xb - xb**2),
+     &cone)
+      g95 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(
+     &-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g96 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g97 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g98 = hp_glog((cone*(im*r1 + r2*r3*(-1 + xb) + im*xa*xb))/((r2 - im*r3)*r3*(-1 + r3**2)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-
+     &1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g99 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone,cone)
       g100 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
       g101 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g102 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g103 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g104 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g105 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g102 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(
+     &xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g103 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa +
+     & xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g104 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa 
+     &+ xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g105 = hp_glog(-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa 
+     &+ xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g106 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),cone,cone)
       g107 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
       g108 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g109 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g110 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g111 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g112 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g109 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)
+     &*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g110 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(
+     &xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g111 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(
+     &xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g112 = hp_glog((-2*cone*(r1 + xa))/((xa + xb)*(-1 + xb**2)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(
+     &xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g113 = hp_glog(-((cone*(r1 + xb))/(xb*(-2 + xa + xb))),cone,cone)
       g114 = hp_glog((cone*(r1 + xa*xb))/((-1 + xa)*xb),czip,cone)
       g115 = hp_glog((cone*(r1 + xa*xb))/((-1 + xa)*xb),cone,cone)
@@ -1148,82 +1177,137 @@
       g120 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),cone,cone)
       g121 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
       g122 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g123 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g124 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g125 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g126 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g123 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))
+     &/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g124 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/(
+     &(-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g125 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/
+     &((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g126 = hp_glog((cone*(r1 + xa*xb))/(xb - xb**2),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/
+     &((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g127 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),cone,cone)
       g128 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
       g129 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g130 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g131 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g132 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g133 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g130 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb)
+     &)))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g131 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb)))
+     &)/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g132 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))
+     &))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g133 = hp_glog((-2*cone*(r1 + xa*xb))/(-1 + xb**2),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))
+     &))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g134 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone,cone)
       g135 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
       g136 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g137 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g138 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g139 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g140 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g137 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + 
+     &xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g138 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + 
+     &xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g139 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 
+     &+ xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g140 = hp_glog((cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 
+     &+ xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g141 = hp_glog((cone*(r1 - xb))/(r1 - xb*(-1 + xa + xb)),cone,cone)
       g142 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone,cone)
       g143 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
       g144 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g145 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g146 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g147 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g148 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g145 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((
+     &1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g146 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((
+     &1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g147 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((
+     &-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g148 = hp_glog((cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((
+     &-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g149 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone,cone)
-      g150 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
-      g151 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g152 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g153 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g154 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g155 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g150 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),
+     &cone)
+      g151 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),
+     &cone)
+      g152 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g153 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g154 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g155 = hp_glog((cone*(r1 - im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g156 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone,cone)
-      g157 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
-      g158 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g159 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g160 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g161 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g162 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g157 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),
+     &cone)
+      g158 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),
+     &cone)
+      g159 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g160 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g161 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g162 = hp_glog((cone*(r1 + im*r2*r3*(-1 + xb) - xa*xb))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + 
+     &xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g163 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),cone,cone)
       g164 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
       g165 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g166 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g167 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g168 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g169 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g166 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/
+     &((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g167 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/
+     &((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g168 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))
+     &/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g169 = hp_glog((cone*(r1 - r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))
+     &/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g170 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),cone,cone)
       g171 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
       g172 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g173 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g174 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g175 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g176 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g173 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/
+     &((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g174 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/
+     &((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g175 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))
+     &/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g176 = hp_glog((cone*(r1 + r2*r3*r6))/(r1 - xb*(-1 + xa + xb)),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))
+     &/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g177 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),cone,cone)
-      g178 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
-      g179 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g180 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g181 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g182 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g183 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g178 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - xa))/(r1 -
+     & xb*(-1 + xa + xb)),cone)
+      g179 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - xa*xb))/(
+     &r1 - xb*(-1 + xa + xb)),cone)
+      g180 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(-(r1*(1 + xa)) 
+     &- r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g181 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(-(r1*(1 + xa)) 
+     &+ r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g182 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - r1*xa - 
+     &r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g183 = hp_glog((cone*(r2*r3*r6*(-1 + xb) + 2*xa*xb - r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb))),(cone*(r1 - r1*xa + 
+     &r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
       g184 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),cone,cone)
-      g185 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - xa))/(r1 - xb*(-1 + xa + xb)),cone)
-      g186 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - xa*xb))/(r1 - xb*(-1 + xa + xb)),cone)
-      g187 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(-(r1*(1 + xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g188 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(-(r1*(1 + xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g189 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - r1*xa - r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g190 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - r1*xa + r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
-      g191 = hp_glog((cone*(-xa + xb - r1*(-2 + xa + xb) + (-1 + xa)*xb*(xa + xb)))/((-2 + xa + xb)*(-r1 + xb*(-1 + xa + xb))),cone,cone)
+      g185 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - xa))/(
+     &r1 - xb*(-1 + xa + xb)),cone)
+      g186 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - xa*xb))
+     &/(r1 - xb*(-1 + xa + xb)),cone)
+      g187 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(-(r1*(1 + 
+     &xa)) - r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g188 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(-(r1*(1 + 
+     &xa)) + r2*r3*r4*(-1 + xb) + xa*xb*(xa + xb)))/((1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g189 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - r1*xa -
+     & r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g190 = hp_glog(-((cone*(r2*r3*r6*(-1 + xb) - 2*xa*xb + r1*(1 + xb)))/((1 + xb)*(-r1 + xb*(-1 + xa + xb)))),(cone*(r1 - r1*xa +
+     & r2*r3*r4*(-1 + xb) + xa*xb*(-2 + xa + xb)))/((-1 + xa)*(-r1 + xb*(-1 + xa + xb))),cone)
+      g191 = hp_glog((cone*(-xa + xb - r1*(-2 + xa + xb) + (-1 + xa)*xb*(xa + xb)))/((-2 + xa + xb)*(-r1 + xb*(-1 + xa + xb))),cone,
+     &cone)
       g192 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),cone,cone)
-      g193 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),-((cone*(r1 + xa))/((-1 + xb)*(xa + xb))),cone)
-      g194 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1 + xa*xb))/(xb - xb**2),cone)
-      g195 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),-((cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
-      g196 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(r5 + xb) + xb*(xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g197 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(r5 - xb) + xb*(-xa + r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
-      g198 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(-r5 + xb) + xb*(xa - r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g193 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),-((cone*(r1 + xa))/((-1 + xb)*(
+     &xa + xb))),cone)
+      g194 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1 + xa*xb))/(xb - 
+     &xb**2),cone)
+      g195 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),-((cone*(r1*(r5 + xb) + xb*(xa 
+     &+ r5*(-1 + xa + xb) - xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb))),cone)
+      g196 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(r5 + xb) + xb*(xa + 
+     &r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g197 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(r5 - xb) + xb*(-xa +
+     & r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
+      g198 = hp_glog((-2*cone*(r1*(-1 + xa + xb) + xa*(-1 + xb*(xa + xb))))/((-1 + xb)**2*(xa + xb)),(cone*(r1*(-r5 + xb) + xb*(xa -
+     & r5*(-1 + xa + xb) + xa*(-1 + xb)*(xa + xb))))/((-1 + xa)*(-1 + xb)*xb*(xa + xb)),cone)
       g199 = hp_glog(-((cone*(-xa + xb + r1*(-2 + xa + xb) + (-1 + xa)*xb*(xa + xb)))/((-1 + xb)**2*(xa + xb))),cone,cone)
       g200 = hp_glog((cone*(-r7 - r8*r9 + r2*r3*(xa + xb)))/2.0_ki,(cone*(-r10 + r2))/r3,(cone*r11)/r19)
       g201 = hp_glog((cone*(-r7 - r8*r9 + r2*r3*(xa + xb)))/2.0_ki,(cone*(-r10 + r2))/r3,(cone*r12)/r20)
