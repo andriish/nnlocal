@@ -159,16 +159,6 @@ endif()
 # Executables
 # -------------------------------------------------------------------
 
-#set_source_files_properties(
-#    ${NEEDFILES} ${PROCDEPFILES} ${PHASEFILES} ${PSLIMITFILES}
-#    ${HPINTCTS} ${INTCTS} ${USERFILES} ${GGHFILES}
-#    ${INTEGRATEFILES} ${PARTONFILES}
-#
-#    PROPERTIES Fortran_FORMAT FREE
-#)
-
-
-
 add_executable(nnlocal
     src/Need/nnlocal.f
     ${NEEDFILES} ${PROCDEPFILES} ${PHASEFILES} ${PSLIMITFILES}
@@ -188,64 +178,3 @@ add_executable(mergedata src/Need/mergedata.f90)
 install(TARGETS nnlocal gridplot mergedata
         RUNTIME DESTINATION bin
 )
-
-
-
-if(CMAKE_Fortran_COMPILER_ID STREQUAL "NVHPC")
-set_source_files_properties(
-src/hp_Intcts/hp_glog.f
-src/Intcts/APfactors.f
-src/Need/coupling.f
-    src/Need/banner.f
-    src/Procdep/virtint.f
-    src/Need/checkndotp.f
-    src/Need/reader_input.f
-    src/Procdep/bornint.f
-    src/Need/rgrids.f
-    src/Inc/PR_new.f
-    src/Inc/msq_struc.f
-    src/User/miscclust.f
-    src/User/gencuts_input.f
-src/hp_Intcts/hp_a12carscasggg.f      src/hp_Intcts/hp_a1a1cbrcasgggg.f    src/hp_Intcts/hp_a2carsggg.f            src/hp_Intcts/hp_BGTAa1a1crscasggg.f
-src/hp_Intcts/hp_a12carscasss.f       src/hp_Intcts/hp_a1a1crscas.f        src/hp_Intcts/hp_a2carssrsgg.f          src/hp_Intcts/hp_BGTAa1a1crssscarggg.f
-src/hp_Intcts/hp_a12carscrs.f         src/hp_Intcts/hp_a1a1crssscar.f      src/hp_Intcts/hp_a2srsgg.f              src/hp_Intcts/hp_BGTAa1a1sscarggg.f
-src/hp_Intcts/hp_a12carscrsss.f       src/hp_Intcts/hp_a1a1sscar.f         src/hp_Intcts/hp_AGTBa12carscasssggg.f  src/hp_Intcts/hp_cli2.f
-src/hp_Intcts/hp_a12carssrscasssgg.f  src/hp_Intcts/hp_a1a1sscarsragg.f    src/hp_Intcts/hp_AGTBa12carscrsggg.f    src/hp_Intcts/hp_glog.f
-src/hp_Intcts/hp_a12carssrscrsgg.f    src/hp_Intcts/hp_a1a1sssrgg.f        src/hp_Intcts/hp_AGTBa12carscrsssggg.f  src/hp_Intcts/hp_Iopmat2.f
-src/hp_Intcts/hp_a12carssrsssgg.f     src/hp_Intcts/hp_a1c1cargggg.f       src/hp_Intcts/hp_AGTBa12carsssggg.f     src/hp_Intcts/hp_Li3.f
-src/hp_Intcts/hp_a12carsss.f          src/hp_Intcts/hp_a1c1cbrgggg.f       src/hp_Intcts/hp_AGTBa1a1crscasggg.f    src/hp_Intcts/hp_mylog.f
-src/hp_Intcts/hp_a12casbrcasgggg.f    src/hp_Intcts/hp_a1carsr0g.f         src/hp_Intcts/hp_AGTBa1a1crssscarggg.f  src/hp_Intcts/hp_rva1carsr1g.f
-src/hp_Intcts/hp_a12srscasssgg.f      src/hp_Intcts/hp_a1ncar0gg.f         src/hp_Intcts/hp_AGTBa1a1sscarggg.f     src/hp_Intcts/hp_rva1ncar1gg.f
-src/hp_Intcts/hp_a12srscrsgg.f        src/hp_Intcts/hp_a1sr0g.f            src/hp_Intcts/hp_APfactors.f            src/hp_Intcts/hp_rva1sr1g.f
-src/hp_Intcts/hp_a12srsssgg.f         src/hp_Intcts/hp_a2carbsgggg_bulk.f  src/hp_Intcts/hp_BGTAa12carscasssggg.f  src/hp_Intcts/hp_WGPLG.f
-src/hp_Intcts/hp_a1a1carcasggg.f      src/hp_Intcts/hp_a2carbsgggg.f       src/hp_Intcts/hp_BGTAa12carscrsggg.f
-src/hp_Intcts/hp_a1a1cassscarsragg.f  src/hp_Intcts/hp_a2carbssrsgg.f      src/hp_Intcts/hp_BGTAa12carscrsssggg.f
-src/hp_Intcts/hp_a1a1cassssragg.f     src/hp_Intcts/hp_a2carsggg_bulk.f    src/hp_Intcts/hp_BGTAa12carsssggg.f
-
-    src/ggH/gg_htot.f
-    src/Intcts/a1c1cargggg.f
-    src/hp_Intcts/hp_Iopmat2.f
-
-    PROPERTIES COMPILE_FLAGS "-Mfixed -Mextend"
-)
-
-set_source_files_properties(
-    src/hp_Intcts/hp_a2carsggg_bulk.f
-    
-    #src/Procdep/virtint.f
-    #src/ggH/gg_htot.f
-    PROPERTIES COMPILE_FLAGS "-Mextend"
-)
-
-
-#set_source_files_properties(
-#src/Need/reader_input.f
-#    ${NEEDFILES} ${PROCDEPFILES} ${PHASEFILES} ${PSLIMITFILES}
-#    ${HPINTCTS} ${INTCTS} ${USERFILES} ${GGHFILES}
-#    ${INTEGRATEFILES} ${PARTONFILES}
-#
-#    PROPERTIES Fortran_FORMAT FREE
-#)
-#set_source_files_properties(
-#src/hp_Intcts/hp_Iopmat2.f
-endif()
