@@ -47,8 +47,8 @@ c--- read-in grid
          write(12,'(A)') 'set datafile separator comma'
          write(12,*)
          write(12,'(A)') 'set table $Dummy'
-         write(12,'(A)') 'plot myXtics=myYtics="" $Data using \'
-         write(12,'(A)') '(myXtics = myXtics.($0==0?"":",").strcol(1), \'
+         write(12,'(A)') 'plot myXtics=myYtics="" $Data using '
+         write(12,'(A)') '(myXtics = myXtics.($0==0?"":",").strcol(1), '
          write(12,'(A)') 'myYtics = myYtics.($0==0?"":",").strcol(2)) w table'
          write(12,'(A)') 'unset table'
          write(12,*)
@@ -58,7 +58,7 @@ c--- read-in grid
          write(12,'(A)') 'set xtics 0.2'
          write(12,'(A)') 'set mxtics 4'
          write(12,'(A)') 'set format x2 ""'
-         write(12,'(A)') 'plot $Data u 1:2 with linespoint lw 2 lc rgb "black" ps 0 notitle ,\'
+         write(12,'(A)') 'plot $Data u 1:2 with linespoint lw 2 lc rgb "black" ps 0 notitle ,'
          write(12,'(A)') '     for [j=1:50] (j/50.) lc rgb "black"'
          write(12,*)
          write(12,*)
