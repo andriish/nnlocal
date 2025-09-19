@@ -164,5 +164,5 @@ add_executable(mergedata src/Need/mergedata.f90)
 # Installation
 # -------------------------------------------------------------------
 install(TARGETS nnlocal gridplot mergedata
-        RUNTIME DESTINATION bin
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
