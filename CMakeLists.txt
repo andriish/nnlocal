@@ -69,15 +69,15 @@ set(
 HPINTCTS 
 hp_Iopmat2.f hp_cli2.f hp_Li3.f hp_WGPLG.f hp_mylog.f hp_glog.f hp_a12srscrsgg.f hp_a2srsgg.f 
 hp_a2carssrsgg.f hp_a2carbssrsgg.f hp_a2carsggg.f hp_a2carsggg_bulk.f hp_a2carbsgggg.f hp_a2carbsgggg_bulk.f
- hp_a12srsssgg.f hp_a12srscasssgg.f hp_a12carscasggg.f hp_a12carssrsssgg.f hp_a12casbrcasgggg.f 
- hp_a12carssrscrsgg.f hp_a12carssrscasssgg.f hp_AGTBa12carscrsggg.f hp_BGTAa12carscrsggg.f hp_a12carscrs.f
-  hp_AGTBa12carscrsssggg.f hp_BGTAa12carscrsssggg.f hp_a12carscrsss.f hp_AGTBa12carscasssggg.f
-   hp_BGTAa12carscasssggg.f hp_a12carscasss.f hp_AGTBa12carsssggg.f hp_BGTAa12carsssggg.f hp_a12carsss.f
-    hp_a1a1cassscarsragg.f hp_a1a1cbrcasgggg.f hp_a1a1cassssragg.f hp_a1a1sscarsragg.f hp_a1a1carcasggg.f 
-    hp_a1a1sssrgg.f hp_AGTBa1a1crscasggg.f hp_BGTAa1a1crscasggg.f hp_a1a1crscas.f hp_AGTBa1a1crssscarggg.f
-     hp_BGTAa1a1crssscarggg.f hp_a1a1crssscar.f hp_AGTBa1a1sscarggg.f hp_BGTAa1a1sscarggg.f hp_a1a1sscar.f 
-     hp_rva1ncar1gg.f hp_rva1sr1g.f hp_rva1carsr1g.f hp_a1ncar0gg.f hp_a1sr0g.f hp_a1carsr0g.f hp_a1c1cargggg.f 
-     hp_a1c1cbrgggg.f hp_APfactors.f)
+hp_a12srsssgg.f hp_a12srscasssgg.f hp_a12carscasggg.f hp_a12carssrsssgg.f hp_a12casbrcasgggg.f 
+hp_a12carssrscrsgg.f hp_a12carssrscasssgg.f hp_AGTBa12carscrsggg.f hp_BGTAa12carscrsggg.f hp_a12carscrs.f
+hp_AGTBa12carscrsssggg.f hp_BGTAa12carscrsssggg.f hp_a12carscrsss.f hp_AGTBa12carscasssggg.f
+hp_BGTAa12carscasssggg.f hp_a12carscasss.f hp_AGTBa12carsssggg.f hp_BGTAa12carsssggg.f hp_a12carsss.f
+hp_a1a1cassscarsragg.f hp_a1a1cbrcasgggg.f hp_a1a1cassssragg.f hp_a1a1sscarsragg.f hp_a1a1carcasggg.f 
+hp_a1a1sssrgg.f hp_AGTBa1a1crscasggg.f hp_BGTAa1a1crscasggg.f hp_a1a1crscas.f hp_AGTBa1a1crssscarggg.f
+hp_BGTAa1a1crssscarggg.f hp_a1a1crssscar.f hp_AGTBa1a1sscarggg.f hp_BGTAa1a1sscarggg.f hp_a1a1sscar.f 
+hp_rva1ncar1gg.f hp_rva1sr1g.f hp_rva1carsr1g.f hp_a1ncar0gg.f hp_a1sr0g.f hp_a1carsr0g.f hp_a1c1cargggg.f 
+hp_a1c1cbrgggg.f hp_APfactors.f)
 list(TRANSFORM HPINTCTS    PREPEND "src/hp_Intcts/")
 
 set(
@@ -114,8 +114,8 @@ donothing_gvec.f dot.f dotem.f etmiss.f getbs.f getptilde.f getptildejet.f higgs
 hbbdecay.f htautaudecay.f hwwdecay.f hbbdecay_g.f hbbdecay_v.f Iopmat1.f includedipole.f interpolate_hto.f 
 is_functions.f lenocc.f lnrat.f masscuts.f mfrun.f nnlocal_main.f nnlocal_exit.f nnlocal_init.f nnlocal_vegas.f 
 ptyrap.f r.f read_jetcuts.f reader_input.f realhistos.f scaleset.f scaleset_m34.f scaleset_Msqpt34sq.f scaleset_HT.f
- sethparams.f setmb_msbar.f setrunname.f setvdecay.f smalls.f spinoru.f storeptilde.f swapjet.f transformA1_colorful.f 
- transformA2_colorful.f writeinfo.f writeinput.f writeout.f zeromsq.f)
+sethparams.f setmb_msbar.f setrunname.f setvdecay.f smalls.f spinoru.f storeptilde.f swapjet.f transformA1_colorful.f 
+transformA2_colorful.f writeinfo.f writeinput.f writeout.f zeromsq.f)
 list(TRANSFORM NEEDFILES   PREPEND "src/Need/")
 
 set(
