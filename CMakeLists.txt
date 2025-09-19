@@ -7,9 +7,13 @@ project(NNLOCAL VERSION 1.0 LANGUAGES Fortran)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules ${CMAKE_MODULE_PATH})
 include("CMakePrintHelpers")
 include("GNUInstallDirs")
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE DEBUG CACHE STRING "Choose the type of build." FORCE)
+endif()
 option(NNLOCAL_ENABLE_LHAPDF "Enable compilation with LHAPDF" ON)
 
 message(STATUS "NNLOCAL: NNLOCAL_ENABLE_LHAPDF             ${NNLOCAL_ENABLE_LHAPDF}")
+
 
 # -------------------------------------------------------------------
 # Compiler Flags
@@ -18,22 +22,32 @@ message(STATUS "NNLOCAL: NNLOCAL_ENABLE_LHAPDF             ${NNLOCAL_ENABLE_LHAP
 # Detect and set Fortran flags based on compiler
 if(CMAKE_Fortran_COMPILER_ID STREQUAL "Intel" OR CMAKE_Fortran_COMPILER_ID STREQUAL "IntelLLVM")
     # Flags for Intel Fortran (classic or LLVM-based)
-    set(CMAKE_Fortran_FLAGS "-traceback -g -O2  -diag-disable 8291 -diag-disable 6375 -extend-source 132")
+    set(CMAKE_Fortran_FLAGS "-diag-disable 8291 -diag-disable 6375 -extend-source 132")
+    set(CMAKE_Fortran_FLAGS_DEBUG "-g  -O2 -traceback ")
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O3")
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "NVHPC")
     # NVIDIA HPC Fortran
-    set(CMAKE_Fortran_FLAGS "-g -Mbounds -Mpreprocess -Mextend")
+    set(CMAKE_Fortran_FLAGS "-Mbounds -Mpreprocess -Mextend")
+    set(CMAKE_Fortran_FLAGS_DEBUG "-g -O2")
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O3")
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "GNU")
     # GNU Fortran
-    set(CMAKE_Fortran_FLAGS "-fno-automatic -std=legacy -fno-f2c -g -ffixed-line-length-none")
+    set(CMAKE_Fortran_FLAGS "-fno-automatic -std=legacy -fno-f2c -ffixed-line-length-none")
+    set(CMAKE_Fortran_FLAGS_DEBUG "-g -O2")
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O3")
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "LFortran")
     # LFortran
-    set(CMAKE_Fortran_FLAGS "--implicit-interface -g --fixed-form --implicit-typing")
+    set(CMAKE_Fortran_FLAGS "--implicit-interface --fixed-form --implicit-typing")
+    set(CMAKE_Fortran_FLAGS_DEBUG "-g -O2")
+    set(CMAKE_Fortran_FLAGS_RELEASE "-O3")
 else()
     message(WARNING "Unknown Fortran compiler: ${CMAKE_Fortran_COMPILER_ID}. Using default flags.")
-    set(CMAKE_Fortran_FLAGS "-g")
 endif()
+
+message(STATUS "NNLOCAL: CMAKE_BUILD_TYPE                  ${CMAKE_BUILD_TYPE}")
 message(STATUS "NNLOCAL: CMAKE_Fortran_COMPILER_ID         ${CMAKE_Fortran_COMPILER_ID}")
 message(STATUS "NNLOCAL: CMAKE_Fortran_FLAGS               ${CMAKE_Fortran_FLAGS}")
+message(STATUS "NNLOCAL: CMAKE_Fortran_FLAGS_${CMAKE_BUILD_TYPE}               ${CMAKE_Fortran_FLAGS_${CMAKE_BUILD_TYPE}}")
 
 # -------------------------------------------------------------------
 # Dependencies
