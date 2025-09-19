@@ -1,25 +1,19 @@
 cmake_minimum_required(VERSION 3.16)
-project(NNLOCAL LANGUAGES Fortran CXX)
+project(NNLOCAL LANGUAGES Fortran)
 
 # -------------------------------------------------------------------
 # Configuration Options
 # -------------------------------------------------------------------
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules ${CMAKE_MODULE_PATH})
-option(NNLOCAL_ENABLE_LHAPDF "Enable LHAPDF support" ON)
+include("CMakePrintHelpers")
+include("GNUInstallDirs")
+option(NNLOCAL_ENABLE_LHAPDF "Enable compilation with LHAPDF" ON)
 
-# -------------------------------------------------------------------
-# Dependencies
-# -------------------------------------------------------------------
-if(NNLOCAL_ENABLE_LHAPDF)
-    find_package(LHAPDF REQUIRED)
-endif()
+message(STATUS "NNLOCAL: NNLOCAL_ENABLE_LHAPDF             ${NNLOCAL_ENABLE_LHAPDF}")
 
 # -------------------------------------------------------------------
 # Compiler Flags
 # -------------------------------------------------------------------
-
-# Set C++ standard globally
-set(CMAKE_CXX_STANDARD 17)
 
 # Detect and set Fortran flags based on compiler
 if(CMAKE_Fortran_COMPILER_ID STREQUAL "Intel" OR CMAKE_Fortran_COMPILER_ID STREQUAL "IntelLLVM")
@@ -28,13 +22,25 @@ if(CMAKE_Fortran_COMPILER_ID STREQUAL "Intel" OR CMAKE_Fortran_COMPILER_ID STREQ
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "NVHPC")
     # NVIDIA HPC Fortran
     set(CMAKE_Fortran_FLAGS "-g -Mbounds -Mpreprocess -Mextend")
-#-Mfreeform -Mextend -Mextend
 elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "GNU")
     # GNU Fortran
     set(CMAKE_Fortran_FLAGS "-fno-automatic -std=legacy -fno-f2c -g -ffixed-line-length-none")
+elseif(CMAKE_Fortran_COMPILER_ID STREQUAL "LFortran")
+    # LFortran
+    set(CMAKE_Fortran_FLAGS "--implicit-interface -g --fixed-form --implicit-typing")
 else()
     message(WARNING "Unknown Fortran compiler: ${CMAKE_Fortran_COMPILER_ID}. Using default flags.")
     set(CMAKE_Fortran_FLAGS "-g")
+endif()
+message(STATUS "NNLOCAL: CMAKE_Fortran_COMPILER_ID         ${CMAKE_Fortran_COMPILER_ID}")
+message(STATUS "NNLOCAL: CMAKE_Fortran_FLAGS               ${CMAKE_Fortran_FLAGS}")
+
+# -------------------------------------------------------------------
+# Dependencies
+# -------------------------------------------------------------------
+if(NNLOCAL_ENABLE_LHAPDF)
+    find_package(LHAPDF REQUIRED)
+    cmake_print_properties(TARGETS LHAPDF::LHAPDF PROPERTIES LOCATION INTERFACE_INCLUDE_DIRECTORIES)
 endif()
 
 # -------------------------------------------------------------------
@@ -58,8 +64,7 @@ hp_a2carssrsgg.f hp_a2carbssrsgg.f hp_a2carsggg.f hp_a2carsggg_bulk.f hp_a2carbs
      hp_BGTAa1a1crssscarggg.f hp_a1a1crssscar.f hp_AGTBa1a1sscarggg.f hp_BGTAa1a1sscarggg.f hp_a1a1sscar.f 
      hp_rva1ncar1gg.f hp_rva1sr1g.f hp_rva1carsr1g.f hp_a1ncar0gg.f hp_a1sr0g.f hp_a1carsr0g.f hp_a1c1cargggg.f 
      hp_a1c1cbrgggg.f hp_APfactors.f)
-
-list(TRANSFORM HPINTCTS    PREPEND "src/hp_Intcts//")
+list(TRANSFORM HPINTCTS    PREPEND "src/hp_Intcts/")
 
 set(
 INTCTS  
@@ -74,25 +79,17 @@ a1a1sscar.f rva1ncar1gg.f rva1sr1g.f rva1carsr1g.f a1ncar0gg_loprec.f a1ncar0gg.
 a1c1cargggg.f a1c1cbrgggg.f APfactors.f)
 list(TRANSFORM INTCTS   PREPEND "src/Intcts/")
 
-
-
 set(
 GGHFILES  
 finitemtcorr.f Ftriangle.f gg_hgaga_v_cf.f gg_hgamgam.f gg_hgamgam_v.f gg_hgamgam_gvec.f gg_hgamgam_gvecgvec.f 
 gg_hgamgam_v_cf.f gg_hgamgam_gs_cf.f gg_hgamgam_vgvec_cf.f gg_hgagag_gs_colorful.f gg_hgagag.f gg_hgagagg.f 
 gg_hgagag_gvec.f gg_hgagag_v.f gg_hg_z_cf.f gg_hg_z_wrap.f gg_htot.f h4g.f hqqgg.f hjetfill.f msqgamgam.f)
-
 list(TRANSFORM GGHFILES    PREPEND "src/ggH/")
-
-
 
 set(
 INTEGRATEFILES 
 dgauss.f ebook.f mbook.f ran0.f ran1.f rn.f vegas.f)
-
 list(TRANSFORM INTEGRATEFILES    PREPEND "src/Integrate/")
-
-
 
 set(
 NEEDFILES  
@@ -105,37 +102,28 @@ is_functions.f lenocc.f lnrat.f masscuts.f mfrun.f nnlocal_main.f nnlocal_exit.f
 ptyrap.f r.f read_jetcuts.f reader_input.f realhistos.f scaleset.f scaleset_m34.f scaleset_Msqpt34sq.f scaleset_HT.f
  sethparams.f setmb_msbar.f setrunname.f setvdecay.f smalls.f spinoru.f storeptilde.f swapjet.f transformA1_colorful.f 
  transformA2_colorful.f writeinfo.f writeinput.f writeout.f zeromsq.f)
-
 list(TRANSFORM NEEDFILES   PREPEND "src/Need/")
-
-
 
 set(
 PARTONFILES  
 alfamz.f checkpath.f newton1.f)
-
 list(TRANSFORM PARTONFILES   PREPEND "src/Parton//")
-
-
 
 set(
 PSLIMITFILES 
 genlimit.f print.f rambo.f singen.f
 )
-
-list(TRANSFORM PSLIMITFILES   PREPEND  src/pslimits/)
+list(TRANSFORM PSLIMITFILES   PREPEND  "src/pslimits/")
 
 set(
 PHASEFILES 
 breitw.f gencheck.f gen2.f gen3.f gen4.f phase3.f phase4.f phi1_2m_nobw.f phi3.f phi3m.f phi3m0.f)
-
-
-list(TRANSFORM PHASEFILES    PREPEND  src/Phase/)
+list(TRANSFORM PHASEFILES    PREPEND  "src/Phase/")
 
 set(
 PROCDEPFILES  
 bornint.f chooser.f gen_born_ps.f gen_virt_ps.f gen_real_ps.f realint.f virtint.f)
-list(TRANSFORM PROCDEPFILES    PREPEND  src/Procdep/)
+list(TRANSFORM PROCDEPFILES    PREPEND  "src/Procdep/")
 
 set(
 USERFILES  
