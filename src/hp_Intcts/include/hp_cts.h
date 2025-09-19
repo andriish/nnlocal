@@ -57,7 +57,8 @@
      1  na1a1cassssragg(0:2,0:2,-4:0),
      2  na1a1sscarsragg(0:2,0:2,-4:0),
      3  na1a1sssrgg(0:2,0:2,-4:0),
-     4  na1a1crssscarggg(0:2,0:2,-4:0), na1a1crssscargqg(0:2,0:2,-4:0), na1a1crssscarqgg(0:2,0:2,-4:0), na1a1crssscarqqg(0:2,0:2,-4:0),
+     4  na1a1crssscarggg(0:2,0:2,-4:0), na1a1crssscargqg(0:2,0:2,-4:0), na1a1crssscarqgg(0:2,0:2,-4:0), na1a1crssscarqqg(0:2,0:2,-
+     &4:0),
      5  na1a1sscarggg(0:2,0:2,-4:0), na1a1sscargqg(0:2,0:2,-4:0), na1a1sscarqgg(0:2,0:2,-4:0), na1a1sscarqqg(0:2,0:2,-4:0)
 
 	
